@@ -102,3 +102,13 @@
     color: black;
     font-style: normal;
 }
+.foodcart{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgb(50, 179, 50);
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    
+}
