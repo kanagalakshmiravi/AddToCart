@@ -165,3 +165,132 @@ header{
     
 }
 
+.foodcart:active{
+    background-color: red;
+    transform: scale(0.9);
+    border-radius: 1px;
+}
+.cart-slider{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px 20px 20px 20px ;
+  background-color: white;
+
+}
+.cart-image{
+    width: 85px;
+    height: 85px;
+     object-fit: cover ;
+     border-radius: 2px;
+     padding: 5px;
+     border:  1px solid rgba(0,0,0,0.2);
+     text-align: center;
+     margin: 10px;
+     
+}
+
+.cart-active{
+    right:0 ;
+    transition: 0.5s;
+
+}
+.cart-title{
+text-align: center;
+font-family: "Caveat", cursive;
+font-weight: 900;
+text-decoration: none;
+font-size: 30px;
+color: black;
+padding-bottom: 10px;
+border-bottom:  1px solid rgba(0,0,0,0.2);
+
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 13%;
+    align-items: center;
+   padding: 10px;
+
+position: relative;
+border-bottom: 1px solid rgba(0,0,0,0.2);
+
+}
+
+.cart-box:hover{ box-shadow: 2px 0px 13px 1px rgba(0,0,0,0.14);
+    -webkit-box-shadow: 2px 0px 13px 1px rgba(0,0,0,0.14);
+  
+   
+    }
+
+.food-name{
+    font-family: "Poppins", sans-serif;
+    color: red;
+    font-style: normal;
+    padding-bottom: 5px;  
+}
+
+.price-box{
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    /* justify-content: space-between; */
+
+}
+.cart-price{
+    padding-right: 35px;
+    padding-bottom: 3px;
+}
+
+.cart-qut{
+    width: 50px;
+    outline: none;
+    border: 1p solid rgba(0,0,0,0.2);
+    text-align: center;
+    font-size: 1rem;
+
+}
+.cart-remove{
+    text-align: center;
+    color: red;
+
+}
+.cart-remove:active {
+height: 13px;
+width: 13px;
+  }
+  .total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+  }
+  .total-title{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+.total-price{
+    margin-left: 0.5rem;
+    font-family: "Poppins", sans-serif;
+}
+.btn-buy{
+    padding: 12px 20px;
+    background-color: #2f3542;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+#cart-close{
+position: absolute;
+top: 1rem;
+right: 0.8rem;
+font-size: 2rem;
+}
