@@ -67,7 +67,7 @@ header{
         color: black;
 
 }
-.carticon{
+#cart-icon{
     height: 30px;
     width: 30px;
     position: absolute;
