@@ -37,8 +37,8 @@ function removeitem(){
 
 //change quantity
 
-// function Quantitychange(){
-//     if(isNaN(this.value) || this.value<1){
-//         this.value=1;
-//     }
-// }
+function Quantitychange(){
+    if(isNaN(this.value) || this.value<1){
+        this.value=1;
+    }
+}
