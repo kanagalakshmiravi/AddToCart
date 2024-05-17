@@ -24,9 +24,9 @@ function loadcontent(){
     });
 
     // product item change event
-    let qtyelement=document.querySelectorAll('.cart-qut');
-    btnremove.forEach((input)=>{
-      btn.addEventListener('click',Quantitychange) ;
+    let qtyelement =document.querySelectorAll('.cart-qut');
+    qtyelement.forEach((input)=>{
+      input.addEventListener('change',changeqty);
     });
 }
 
@@ -37,8 +37,3 @@ function removeitem(){
 
 //change quantity
 
-function Quantitychange(){
-    if(isNaN(this.value) || this.value<1){
-        this.value=1;
-    }
-}
