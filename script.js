@@ -41,7 +41,8 @@ function loadcontent(){
 //remove items 
 function removeitem(){
     if (confirm('Are you sure to remove')){
-        let title=this.parentElement.querySelector('.food-name');
+        let title=this.parentElement.querySelector('.food-name').innerHTML;
+        console.log(title);
         itemlist=itemlist.filter(el=>el.title!=title);
     this.parentElement.remove();
     loadcontent();
@@ -63,7 +64,7 @@ let itemlist=[];
 function addcart(){
    let food =this.parentElement;
    let title = food.querySelector('.foodname').innerHTML;
-   let price= food.querySelector('.food-price').innerHTML;
+   let price = food.querySelector('.food-price').innerHTML;
    let imgSrc = food.querySelector('.foodimage').src;
 
 //    console.log(title,price,imgSrc)
@@ -114,8 +115,30 @@ return `
                         </div>
 `;
 
-}
+} 
 
+function updatetotal()
+{
+   const cartitems=document.querySelectorAll('.cart-box');
+   const totalvalue=document.querySelector('.total-price');
+
+   let total=0;
+
+   cartitems.forEach(product=>{
+let priceElement=product.querySelector('.cart-price');
+let price=parseFloat(priceElement.innerHTML.replace("₹.",""));
+let qty=product.querySelector('.cart-qut').value;
+console.log(qty)
+total+=(price*qty);
+
+product.querySelector('.cart-amt').innerText="₹."+(price*qty);
+
+
+   });
+
+
+totalvalue.innerHTML='₹.'+total;
+}
 
 
 
